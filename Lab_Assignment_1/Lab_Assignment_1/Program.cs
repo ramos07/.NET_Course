@@ -6,7 +6,7 @@
 using System;
 using System.Linq;
 
-namespace HelloWorld1
+namespace LabAssignment1
 {
     class Program
     {
