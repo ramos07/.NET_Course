@@ -15,13 +15,19 @@ namespace LabAssignment1
         {
             private bool[] integers;
 
-            //default contstructor
+            /// <summary>
+            /// Default constructor that initializes boolean array to 101 elements
+            /// </summary>
             public IntegerSet()
             {
                 integers = new bool[101]; 
             }
 
-            //paratmeterized constructor
+            /// <summary>
+            /// Paramterized constructor that takes in intArray and assigns each 
+            /// value to to the index of the object IntegerSet
+            /// </summary>
+            /// <param name="intArray"></param>
             public IntegerSet(int[] intArray)
             {
                 integers = new bool[101];
