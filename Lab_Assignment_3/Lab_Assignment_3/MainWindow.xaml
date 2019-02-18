@@ -1,12 +1,39 @@
 ﻿<Window x:Class="Lab_Assignment_3.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Lab_Assignment_3"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+        xmlns:viewmodel2="clr-namespace:Lab_Assignment_3.ViewModel" 
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <viewmodel2:ViewModel x:Key="vm"></viewmodel2:ViewModel>
+    </Window.Resources>
+    <Grid Width="400" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center" DataContext="{Binding Source={StaticResource vm}}">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Number - 1 : " HorizontalContentAlignment="Right"></Label>
+        <TextBox Grid.Row="0" Grid.Column="1" Name="txtNumb1" Margin="5" Text="{Binding Path=Number1}"></TextBox>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Number - 2 : " HorizontalContentAlignment="Right"></Label>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="txtNumb2"  Margin="5" Text="{Binding Path=Number2}"></TextBox>
+
+
+        <Button Grid.Row="2" Grid.Column="1" Margin="5" Content="Add" Command="{Binding Path=MyCommand}"></Button>
+        <Button Grid.Row="2" Grid.Column="0" Margin="5" Content="Multiply" Command="{Binding Path=MultiplyCommand}"></Button>
+        <Button Grid.Row="3" Grid.Column="0" Margin="5" Content="Subtract" Command="{Binding Path=SubtractCommand}"></Button>
+        <Button Grid.Row="3" Grid.Column="1" Margin="5" Content="Divide" Command="{Binding Path=DivideCommand}"></Button>
+
+        <Label Grid.Row="4" Grid.Column="0" Content="Result : " HorizontalContentAlignment="Right"></Label>
+        <TextBox Grid.Row="4" Grid.Column="1" Margin="5" Text="{Binding Path=NumberSum, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
     </Grid>
 </Window>
