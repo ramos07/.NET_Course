@@ -27,16 +27,16 @@ namespace Lab_Assignment_3.ViewModel
             }
         }
 
-        private float _number1;
-        public float Number1
+        private string _number1;
+        public string Number1
         {
             get { return _number1; }
             set { _number1 = value; OnPropertyChanged("Number1"); }
         }
 
 
-        private float _number2;
-        public float Number2
+        private string _number2;
+        public string Number2
         {
             get { return _number2; }
             set { _number2 = value; OnPropertyChanged("Number2"); }
@@ -68,22 +68,38 @@ namespace Lab_Assignment_3.ViewModel
 
         private void execute(object parameter)
         {
-            NumberSum = Number1 + Number2;
+            float num1;
+            float num2;
+            num1 = float.Parse(Number1);
+            num2 = float.Parse(Number2);
+            NumberSum = num1 + num2;
         }
 
         private void executeMultiplication(object parameter)
         {
-            NumberSum = Number1 * Number2;
+            float num1;
+            float num2;
+            num1 = float.Parse(Number1);
+            num2 = float.Parse(Number2);
+            NumberSum = num1 * num2;
         }
 
         private void executeSubtraction(object parameter)
         {
-            NumberSum = Number1 - Number2;
+            float num1;
+            float num2;
+            num1 = float.Parse(Number1);
+            num2 = float.Parse(Number2);
+            NumberSum = num1 - num2;
         }
 
         private void executeDivision(object paramter)
         {
-            NumberSum = Number1 / Number2;
+            float num1;
+            float num2;
+            num1 = float.Parse(Number1);
+            num2 = float.Parse(Number2);
+            NumberSum = num1 / num2;
         }
 
     }
