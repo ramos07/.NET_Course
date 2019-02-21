@@ -7,11 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid Background="#FFECEAFA">
-        <ListBox HorizontalAlignment="Left" Height="220" Margin="42,49.333,0,0" VerticalAlignment="Top" Width="322"/>
-        <Button Content="Add" HorizontalAlignment="Left" Margin="407.333,92,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Exit" HorizontalAlignment="Left" Margin="407.333,203.999,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label Content="Customers:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-
 
     </Grid>
 </Window>
